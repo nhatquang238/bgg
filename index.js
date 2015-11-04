@@ -7,7 +7,7 @@ var entityInterceptor = require('rest/interceptor/entity');
 var mimeInterceptor = require('rest/interceptor/mime');
 
 var restCall = rest
-  .chain(pathPrefixInterceptor, { prefix: 'http://www.boardgamegeek.com/xmlapi2/'})
+  .chain(pathPrefixInterceptor, { prefix: 'https://boardgamegeek.com/xmlapi2/'})
   .chain(mimeInterceptor, {mime:'text/xml', accept: 'text/xml'})
   .chain(interceptor)
   .chain(entityInterceptor)
